@@ -16,7 +16,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
 
     @IBOutlet weak var pictureImage: UIImageView!
-    
+
     @IBAction func cameraButtonAction(_ sender: Any) {
         // カメラが利用可能かチェック
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -33,10 +33,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             print("カメラは利用できません")
         }
     }
-    
+
     @IBAction func shareButtonAction(_ sender: Any) {
     }
-    
+
     // 終わった時に呼ばれるdelegateメソッド
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // 撮影したが画像を配置したpictureImageに渡す
@@ -44,6 +44,4 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // モーダルビューを閉じる
         dismiss(animated: true, completion: nil)
     }
-    
 }
-
