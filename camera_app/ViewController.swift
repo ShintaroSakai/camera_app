@@ -18,20 +18,43 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var pictureImage: UIImageView!
 
     @IBAction func cameraButtonAction(_ sender: Any) {
+        // カメラフォトライブラリーどちらから画像を取得するか選択
+        let alertController = UIAlertController(title: "確認", message: "選択してください", preferredStyle: .actionSheet)
+
         // カメラが利用可能かチェック
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            print("カメラは利用できます")
-            //　UIImagePickerControllerインスタンスを作成
-            let imagePickerController = UIImagePickerController()
-            // sourceTypeにカメラを設定
-            imagePickerController.sourceType = .camera
-            // delegate設定
-            imagePickerController.delegate = self
-            // モーダルビューで表示
-            present(imagePickerController, animated: true, completion: nil)
-        } else {
-            print("カメラは利用できません")
+            // カメラを起動するための選択肢を定義
+            let cameraAction = UIAlertAction(title: "カメラ", style: .default, handler: { (action) in
+                let imagePickerController = UIImagePickerController()
+                imagePickerController.sourceType = .camera
+                imagePickerController.delegate = self
+                self.present(imagePickerController, animated: true, completion: nil)
+            })
+            alertController.addAction(cameraAction)
         }
+
+        // フォトライブラリーが利用可能かチェック
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            // フォトライブラリーを起動するための選択肢を定義
+            let photoLibraryAction = UIAlertAction(title: "フォトライブラリー", style: .default, handler: { (action) in
+                //
+                let imagePickerController = UIImagePickerController()
+                imagePickerController.sourceType = .photoLibrary
+                imagePickerController.delegate = self
+                self.present(imagePickerController, animated: true, completion: nil)
+            })
+            alertController.addAction(photoLibraryAction)
+        }
+
+        // キャンセルの選択肢を定義
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+
+        // iPadで落ちてしまう対策
+        alertController.popoverPresentationController?.sourceView = view
+
+        // 選択肢を画面を表示
+        present(alertController, animated: true, completion: nil)
     }
 
     @IBAction func shareButtonAction(_ sender: Any) {
