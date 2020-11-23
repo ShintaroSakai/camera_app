@@ -12,6 +12,7 @@
 		59938FB82560D55200A0073C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59938FB62560D55200A0073C /* Main.storyboard */; };
 		59938FBA2560D55700A0073C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59938FB92560D55700A0073C /* Assets.xcassets */; };
 		59938FBD2560D55700A0073C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59938FBB2560D55700A0073C /* LaunchScreen.storyboard */; };
+		59B68D07256B8741004C9A84 /* EffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B68D06256B8741004C9A84 /* EffectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		59938FB92560D55700A0073C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59938FBC2560D55700A0073C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59938FBE2560D55700A0073C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59B68D06256B8741004C9A84 /* EffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				59938FB22560D55200A0073C /* AppDelegate.swift */,
 				59938FB42560D55200A0073C /* ViewController.swift */,
 				59938FB62560D55200A0073C /* Main.storyboard */,
+				59B68D06256B8741004C9A84 /* EffectViewController.swift */,
 				59938FB92560D55700A0073C /* Assets.xcassets */,
 				59938FBB2560D55700A0073C /* LaunchScreen.storyboard */,
 				59938FBE2560D55700A0073C /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				59938FB52560D55200A0073C /* ViewController.swift in Sources */,
 				59938FB32560D55200A0073C /* AppDelegate.swift in Sources */,
+				59B68D07256B8741004C9A84 /* EffectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
